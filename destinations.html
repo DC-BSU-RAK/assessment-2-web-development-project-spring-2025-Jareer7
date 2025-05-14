@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Etihad Airways | Destinations</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="images/logo.png" alt="Etihad Logo">
+      <span>Etihad Airways</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="destinations.html" class="active">Destinations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="content-box">
+      <h2 class="deals-title">Deals from <span>Abu Dhabi</span></h2>
+      <p class="deals-subtext">Let us inspire your next trip</p>
+
+      <div class="carousel-container">
+        <button class="carousel-btn prev">&#10094;</button>
+
+        <div class="deals-carousel" id="carousel">
+          <div class="deal-card">
+            <img src="images/toronto.jpg" alt="Toronto">
+            <div class="deal-info">
+              <h3>Toronto (Canada)</h3>
+              <p><strong>AED 3,755*</strong> or 70,100 miles</p>
+            </div>
+          </div>
+
+          <div class="deal-card">
+            <img src="images/warsaw.jpg" alt="Warsaw">
+            <div class="deal-info">
+              <h3>Warsaw (Poland)</h3>
+              <p><strong>AED 1,895*</strong> or 33,348 miles</p>
+            </div>
+          </div>
+
+          <div class="deal-card">
+            <img src="images/Baku.jpg" alt="Baku">
+            <div class="deal-info">
+              <h3>Baku (Azerbaijan)</h3>
+              <p><strong>AED 763*</strong> or 1859 miles</p>
+            </div>
+          </div>
+
+          <div class="deal-card">
+            <img src="images/Phuket.jpg" alt="Phuket">
+            <div class="deal-info">
+              <h3>Phuket (Thailand)</h3>
+              <p><strong>AED 2,385*</strong> or 49,000 miles</p>
+            </div>
+          </div>
+
+          <div class="deal-card">
+            <img src="images/nice.jpg" alt="Nice">
+            <div class="deal-info">
+              <h3>Nice (France)</h3>
+              <p><strong>AED 1,455*</strong> or 19,634 miles</p>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Etihad Airways. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const carousel = document.getElementById("carousel");
+    const nextBtn = document.querySelector(".carousel-btn.next");
+    const prevBtn = document.querySelector(".carousel-btn.prev");
+
+    function scrollNext() {
+      carousel.scrollBy({ left: 250, behavior: "smooth" });
+    }
+
+    function scrollPrev() {
+      carousel.scrollBy({ left: -250, behavior: "smooth" });
+    }
+
+    nextBtn.addEventListener("click", scrollNext);
+    prevBtn.addEventListener("click", scrollPrev);
+
+    // Auto slide every 4 seconds
+    setInterval(scrollNext, 4000);
+  </script>
+</body>
+</html>
