@@ -3,14 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Etihad Airways | Destinations</title>
+
+  <!-- Link to shared CSS stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- ===== HEADER SECTION ===== -->
   <header>
     <div class="logo-title">
+      <!-- Company logo and brand title -->
       <img src="images/logo.png" alt="Etihad Logo">
       <span>Etihad Airways</span>
     </div>
+
+    <!-- Navigation menu -->
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -22,14 +29,21 @@
     </nav>
   </header>
 
+  <!-- ===== MAIN SECTION ===== -->
   <main>
     <div class="content-box">
+
+      <!-- Title and intro text for the destination deals section -->
       <h2 class="deals-title">Deals from <span>Abu Dhabi</span></h2>
       <p class="deals-subtext">Let us inspire your next trip</p>
 
+      <!-- Carousel container with navigation buttons -->
       <div class="carousel-container">
+
+        <!-- Previous scroll button -->
         <button class="carousel-btn prev">&#10094;</button>
 
+        <!-- Destination deal cards -->
         <div class="deals-carousel" id="carousel">
           <div class="deal-card">
             <img src="images/toronto.jpg" alt="Toronto">
@@ -70,36 +84,42 @@
               <p><strong>AED 1,455*</strong> or 19,634 miles</p>
             </div>
           </div>
-
         </div>
 
+        <!-- Next scroll button -->
         <button class="carousel-btn next">&#10095;</button>
       </div>
     </div>
   </main>
 
+  <!-- ===== FOOTER SECTION ===== -->
   <footer>
     <p>&copy; 2025 Etihad Airways. All rights reserved.</p>
   </footer>
 
+  <!-- ===== JavaScript for Carousel Functionality ===== -->
   <script>
     const carousel = document.getElementById("carousel");
     const nextBtn = document.querySelector(".carousel-btn.next");
     const prevBtn = document.querySelector(".carousel-btn.prev");
 
+    // Scroll right on next button click
     function scrollNext() {
       carousel.scrollBy({ left: 250, behavior: "smooth" });
     }
 
+    // Scroll left on previous button click
     function scrollPrev() {
       carousel.scrollBy({ left: -250, behavior: "smooth" });
     }
 
+    // Add button click events
     nextBtn.addEventListener("click", scrollNext);
     prevBtn.addEventListener("click", scrollPrev);
 
-    // Auto slide every 4 seconds
+    // Auto-scroll every 4 seconds
     setInterval(scrollNext, 4000);
   </script>
+
 </body>
 </html>

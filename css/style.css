@@ -1,11 +1,13 @@
 
+/* === COLOR VARIABLES === */
 :root {
-  --gold: #C5941B;
-  --dark-maroon: #251019;
-  --text-light: #ffffff;
-  --overlay-bg: rgba(255, 255, 255, 0.9);
+  --gold: #C5941B;                 /* Etihad gold brand color */
+  --dark-maroon: #251019;         /* Etihad dark maroon for header/footer */
+  --text-light: #ffffff;          /* White text for dark backgrounds */
+  --overlay-bg: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
 }
 
+/* === RESET STYLES === */
 * {
   margin: 0;
   padding: 0;
@@ -13,19 +15,20 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;        /* Smooth scrolling for anchor links */
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-image: url('../images/background.png');
+  font-family: 'Segoe UI', sans-serif;  /* Clean sans-serif font */
+  background-image: url('../images/background.png'); /* Background image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
-  color: var(--dark-maroon);
+  color: var(--dark-maroon);      /* Default text color */
 }
 
+/* === HEADER SECTION === */
 header {
   background-color: var(--dark-maroon);
   color: var(--text-light);
@@ -38,6 +41,7 @@ header {
   z-index: 1000;
 }
 
+/* Logo and brand name */
 .logo-title {
   display: flex;
   align-items: center;
@@ -51,6 +55,7 @@ header {
   margin-right: 10px;
 }
 
+/* === NAVIGATION MENU === */
 nav ul {
   list-style: none;
   display: flex;
@@ -67,6 +72,7 @@ nav ul li a:hover {
   color: var(--gold);
 }
 
+/* === MAIN CONTENT AREA === */
 main {
   display: flex;
   flex-direction: column;
@@ -84,6 +90,7 @@ main {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
+/* === HERO SECTION === */
 .hero-title {
   font-size: 38px;
   color: var(--gold);
@@ -98,18 +105,21 @@ main {
   margin-bottom: 20px;
 }
 
+/* === GENERAL TEXT STYLING === */
 main h2, main h3, main p {
   text-align: center;
   margin-bottom: 20px;
   font-size: 18px;
 }
 
+/* === MEDIA CONTENT === */
 main img, main video {
   max-width: 100%;
   border-radius: 10px;
   margin-top: 20px;
 }
 
+/* === FORM STYLING === */
 form {
   display: flex;
   flex-direction: column;
@@ -134,6 +144,7 @@ button {
   cursor: pointer;
 }
 
+/* === FOOTER === */
 footer {
   background-color: var(--dark-maroon);
   color: var(--text-light);
@@ -142,6 +153,7 @@ footer {
   margin-top: auto;
 }
 
+/* === RESPONSIVE DESIGN === */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -157,7 +169,8 @@ footer {
     font-size: 18px;
   }
 }
-/* === DESTINATION DEALS SECTION === */
+
+/* === DESTINATION SECTION === */
 .deals-section {
   text-align: left;
   margin-top: 40px;
@@ -178,56 +191,14 @@ footer {
   color: #555;
 }
 
-.deals-carousel {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  padding-bottom: 10px;
-}
-
-.deal-card {
-  min-width: 220px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  flex-shrink: 0;
-  transition: transform 0.3s;
-}
-
-.deal-card:hover {
-  transform: translateY(-5px);
-}
-
-.deal-card img {
-  width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  height: 140px;
-  object-fit: cover;
-}
-
-.deal-info {
-  padding: 10px;
-}
-
-.deal-info h3 {
-  margin: 0 0 5px;
-  font-size: 16px;
-  color: var(--dark-maroon);
-}
-
-.deal-info p {
-  margin: 0;
-  color: #333;
-  font-size: 14px;
-}
-
+/* === CAROUSEL STYLING === */
 .carousel-container {
   position: relative;
   display: flex;
   align-items: center;
 }
 
+/* Buttons on each side of carousel */
 .carousel-btn {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -254,6 +225,7 @@ footer {
   right: -10px;
 }
 
+/* Carousel track */
 .deals-carousel {
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -261,6 +233,7 @@ footer {
   gap: 20px;
 }
 
+/* Individual card inside the carousel */
 .deal-card {
   min-width: 220px;
   background-color: white;
@@ -298,6 +271,7 @@ footer {
   font-size: 14px;
 }
 
+/* === SERVICES PAGE GRID === */
 .class-grid {
   display: flex;
   flex-wrap: wrap;
@@ -343,6 +317,7 @@ footer {
   color: #333;
 }
 
+/* === ABOUT PAGE HIGHLIGHTS SECTION === */
 .about-highlights {
   margin-top: 40px;
   text-align: center;
@@ -373,6 +348,7 @@ footer {
   animation: fadeInZoom 0.8s forwards;
 }
 
+/* Animation keyframe */
 @keyframes fadeInZoom {
   to {
     opacity: 1;
@@ -397,6 +373,7 @@ footer {
   color: #444;
 }
 
+/* === CONTACT PAGE STYLING === */
 .contact-section {
   display: flex;
   flex-wrap: wrap;
@@ -404,6 +381,7 @@ footer {
   margin-top: 30px;
 }
 
+/* Contact form */
 .contact-form {
   flex: 1;
   min-width: 280px;
@@ -430,6 +408,7 @@ footer {
   cursor: pointer;
 }
 
+/* Contact info box */
 .contact-info {
   flex: 1;
   min-width: 280px;
@@ -444,6 +423,7 @@ footer {
   color: var(--gold);
 }
 
+/* Social media icons */
 .social-icons {
   margin-top: 15px;
 }
